@@ -1,0 +1,44 @@
+$icon-path: "/assets/";
+$icon-back: "arrow-left.svg";
+
+.movie-container {
+    .background-image {
+        img {
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        .movie-details {
+            color: white;
+            padding: 30px;
+            top: 100px;
+            position: absolute;
+            max-width: 50%;
+            font-size: 20px;
+            .back{
+                margin-bottom: 30px;
+                .back-icon{
+                    content: url($icon-path+$icon-back);
+                    height: 50px;
+                    cursor: pointer;
+                }
+            }
+            .movie-title{
+                margin-bottom: 50px;
+                font-size: 48px;
+            }
+            .ratings{
+                margin-bottom: 25px;
+            }
+            .movie-overview{
+                margin-bottom: 25px;
+            }
+            .date{
+                margin-bottom: 25px;
+            }
+            .language{
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<div class="movie-container">
+    <div class="background-image">
+        <img src="{{baseImageUrl}}">
+
+        <div class="movie-details">
+            <div class="back" (click)="backNavigate()">
+                <span class="back-icon"></span>
+            </div>
+            <div class="movie-title">
+                <span>{{movieObject.title}}</span>
+            </div>
+            <div class="ratings">
+                <span>Ratings: {{movieObject.vote_average}} /10</span>
+            </div>
+            <div class="movie-overview">
+                <span>{{movieObject.overview}}</span>
+            </div>
+            <div class="date">
+                <span>Release Date:</span>
+                &nbsp;
+                <span>{{movieObject.release_date}}</span>
+            </div>
+            <div class="language">
+                <span>Original Language:</span>
+                &nbsp;
+                <span>{{movieObject.original_language | uppercase}}</span>
+            </div>
+        </div>
+    </div>
+</div>
