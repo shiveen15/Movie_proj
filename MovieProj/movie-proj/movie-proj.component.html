@@ -1,0 +1,36 @@
+<!-- <button (click)="onclick()">Get</button> -->
+<div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only" id="loading"></span>
+  </div>
+</div>
+
+<div class="app-container">
+  <div class="banner">
+    <img [attr.src]="bannerSrc" />
+  </div>
+
+  <div class="main-container">
+    <div class="heading">
+      <span>Trending</span>
+      <span class="sort" (click)="sort()">Sort by Ratings</span>
+    </div>
+
+    <div class="movie-cards">
+      <div class="cards" *ngFor="let items of movie" (click)="navigate(items)">
+        <div class="image">
+          <img src="{{ baseImageUrl + items?.backdrop_path }} " />
+        </div>
+        <div class="lower-card">
+          <span class="name">{{ items.title }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <div class="page" *ngFor="let item of pages">
+        <button (click)="nextPage(item)">{{ item }}</button>
+      </div>
+    </div>
+  </div>
+</div>
